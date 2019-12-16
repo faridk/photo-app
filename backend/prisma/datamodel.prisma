@@ -1,0 +1,50 @@
+type Comment {
+    id: ID! @unique
+    user: User!
+    post: Post!
+    text: String!
+    time: DateTime!
+}
+
+type Post {
+    id: ID! @unique
+    user: User!
+    location: String
+    description: String
+    image: Image
+    time: DateTime!
+    likes: Int!
+    comments: [Comment]
+}
+
+type Image {
+    id: ID! @unique
+    filename: String!
+    originalFilename: String!
+    user: User!
+    uploadTime: DateTime!
+    uploadIP: String!
+}
+
+type User {
+    id: ID! @unique
+    name: String!
+    email: String! @unique
+    password: String!
+    authTokens: [String]
+    posts: [Post]
+    images: [Image]
+    signedUpOn: DateTime!
+}
+
+type LoginAttempt {
+    id: ID! @unique
+    successful: Boolean!
+    badEmail: Boolean
+    badPassword: Boolean
+    email: String
+    password: String
+    authToken: String
+    time: DateTime!
+    ip: String!
+}

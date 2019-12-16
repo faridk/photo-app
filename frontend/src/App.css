@@ -1,0 +1,75 @@
+body {
+	height: 100%;
+}
+
+.App {
+	text-align: center;
+}
+
+.App-main {
+	height: 100%;
+	/* Set this to the height of the footer so that it doesn't overlap content */
+	margin-bottom: 56px;
+}
+
+.App-logo {
+	animation-name: App-logo-spin;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: cubic-bezier();
+	height: 56px;
+	pointer-events: none;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		 -khtml-user-select: none; /* Konqueror HTML */
+			 -moz-user-select: none; /* Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none; /* Non-prefixed version, currently
+																	supported by Chrome and Opera */
+}
+
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.App-vertical-marginals {
+	background-color: #455d8d;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	height: 56px;
+}
+
+.App-vertical-marginals.footer {
+	align-items: flex-end;
+	justify-content: flex-end;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	position: fixed;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

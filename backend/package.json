@@ -1,0 +1,43 @@
+{
+  "name": "backend",
+  "version": "0.1.4",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "node build/index.js",
+    "watch": "nodemon --watch src --exec \"npm run build && npm run test\"",
+    "yarn-watch": "nodemon --watch src --exec \"yarn run build && yarn run test\"",
+    "flow": "flow check ./src/",
+    "build": "babel src/ -d build/",
+    "run-prisma": "cd ./prisma && sudo docker-compose up -d",
+    "update-prisma-datamodel": "cd ./prisma && prisma deploy && prisma generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csc317-01-fall2019/csc317-termproject-team29"
+  },
+  "author": "Farid Kurbanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csc317-01-fall2019/csc317-termproject-team29/issues"
+  },
+  "homepage": "https://github.com/csc317-01-fall2019/csc317-termproject-team29#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.95.1",
+    "graphql-tag": "^2.10.1",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "cors": "^2.8.5",
+    "graphql": "^14.1.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-upload": "^8.0.5",
+    "lodash": "^4.17.11",
+    "prisma-client-lib": "^1.29.1",
+    "validator": "^10.11.0",
+    "ws": "^6.2.0"
+  }
+}
